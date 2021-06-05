@@ -4,59 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/alfgow.css">
     <title>AlfGoW</title>
 </head>
 <!-- ALT + flecha mueven el párrafo -->
 <header>
-    <p>Setup</p>
+    <!-- Menú desplegable -->
     <nav>
-        <!-- Listas ordenadas es decir con los números 1,2,3..... etiqueta OL -->
-        <ol>
-            <li>
-                <a href="#google-chrome">Google Chrome</a>
-            </li>
-            <li>
-                <a href="#vscode">Visual Studio</a>
-            </li>
-            <li>
-                <a href="#figma">Figma</a>
-            </li>
-            <li>
-                <a href="#github">Github</a>                
-            </li>
-        </ol>
-        <p>Conceptos esenciales del Desarrollo Web</p>
-        <ol>
-            <li>
-                <a href="#html">Qué es HTML</a>               
-            </li>
-            <li>
-                <a href="#etiquetas">Etiquetas</a>                
-            </li>
-            <li>
-                <a href="#dom">DOM</a>                
-            </li>   
-            <li>
-                <a href="#semantica">Semántica</a>                
-            </li>
-            <li>
-                <a href="#atributos">Atributos</a>                
-            </li>
-            <li>
-                <a href="#css">Qué es CSS</a>                
-            </li>
-        </ol>
+        <details open>
+            <summary>
+                Setup
+            </summary>
+                <p>
+                    <!-- Listas ordenadas es decir con los números 1,2,3..... etiqueta OL -->
+                    <ol>
+                        <li>
+                            <a href="#google-chrome">Google Chrome</a>
+                        </li>
+                        <li>
+                            <a href="#vscode">Visual Studio</a>
+                        </li>
+                        <li>
+                            <a href="#figma">Figma</a>
+                        </li>
+                        <li>
+                            <a href="#github">Github</a>
+                        </li>
+                    </ol>
+                </p>
+        </details>
+
+        <details>
+            <summary>
+                Conceptos esenciales del Desarrollo Web
+            </summary>
+                <p>
+                    <ol>
+                        <li>
+                            <a href="#html">Qué es HTML</a>
+                        </li>
+                        <li>
+                            <a href="#etiquetas">Etiquetas</a>
+                        </li>
+                        <li>
+                            <a href="#dom">DOM</a>
+                        </li>
+                        <li>
+                            <a href="#semantica">Semántica</a>
+                        </li>
+                        <li>
+                            <a href="#atributos">Atributos</a>
+                        </li>
+                        <li>
+                            <a href="#css">Qué es CSS</a>
+                        </li>
+                    </ol>
+                </p>
+
+        </details>
+
     </nav>
 </header>
 <body>
+    <!-- Agregar CSS como atributos: 
+    <body style="background: red; color: white"> -->
+
+    <!-- Agregar CSS como una etiqueta: 
+    <style>
+        body {
+            background:purple;
+            color:orange;
+        }
+    </style> -->
+
+    <!-- Agregar CSS através de hoja de estilos externo (llamar la hoja desde el head) -->
+
     <h1>
         Curso esencial de HTML y CSS
     </h1>
+
     <p>
         Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML y CSS para la creación de contenidos, en el nivel 2 aprenderás de componentes y en 3 sobre layouts.
     </p>
     <h2>
-        Setup        
+        Setup
     </h2>
     <img src="./images/google-chrome.png" alt="Logo de Google Chrome" title="Logo de Google Chrome" id="google-chrome">
     <h3>Google Chrome</h3>
@@ -72,7 +103,7 @@
     <img src="./images/github.png" alt="Logo de Github" title="Logo de Github" id="github">
     <h3>Github</h3>
     <p>Así como en Facebook te encuentran tus amigos, en Github te encuentran otras programadoras y programadores de todo el mundo, en vez de subir fotos de tus viajes aquí subes tu código y puedes elegir hacerlo “open source” o guardarlo de manera privada, Github será esencial para almacenar tu futuro portafolio.</p>
-    
+
     <hr>
 
     <h3>“Este es el inicio de tu carrera como Desarrollador Web”</h3>
@@ -80,7 +111,23 @@
     <h2>Conceptos esenciales del Desarrollo Web</h2>
     <h3 id="html">Qué es HTML</h3>
     <p>Hyper Text Markup Language o Lenguaje de marcas Hipertexto. Es el componente más básico de la web. Define el significado y la estructura del contenido.</p>
-    <img src="./images/html.png" alt="Estructura del HTML" title="Estructura del HTML">
+    <!-- Mostrar código en nuestro blog -->
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <!-- <img src="./images/html.png" alt="Estructura del HTML" title="Estructura del HTML"> -->
     <h3 id="etiquetas">Etiquetas</h3>
     <p>Las etiquetas HTML van a ayudarnos a brindar una estructura y semántica al contenido de nuestro website y cada una tiene características y usos diferentes aunque visualmente den un resultado similar.</p>
     <p>Muchas etiquetas son fácil de diferencias como los headings o las imágenes y otras diferentes como header, footer, section o div, aquí es donde la semántica será la respuesta y si sabemos un poco de inglés también podremos darnos una pequeña idea de su uso pero en este curso vamos a usar las más importantes y que serán parte de tu día a día como Software Developer.</p>
@@ -91,7 +138,7 @@
     <p>La semántica le brinda sentido a cada elemento existen en un sitio web, algunos elementos será meramente decorativos y no deben significar nada pero otros serán títulos y deberán estar en diferente jerarquías o alguna secciones serán más relevantes que otras, esto ayudará a los motores de búsqueda como Google o Duck Duck Go a diferenciar tu contenido, categorizar y será la herramientas más valiosa para estar en los primeros resultados de búsqueda SEO. También ayudará a la accesibilidad de tu sitio web, para que personas con habilidades diferentes puedan entender cada contenido.</p>
     <h3 id="atributos">Atributos</h3>
     <p>Los atributos le dan características extra a las etiquetas para complementar información y son pre programadas por el navegador, algunos atributos funcionan en todas las etiquetas de la misma forma como ‘class’ pero otros atributos funcionan en solo alguna etiquetas como src</p>
-    <h3 id="css">CSS</h3>
+    <h3 id="css"> <a href="css.html">CSS</a></h3>
     <p>Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir la presentación de documentos HTML</p>
     <img src="./images/css.png" alt="Imágen del Logo de CSS3" title="Imágen del logo de CSS3">
 
@@ -104,7 +151,7 @@
         <li>Border / Bordes</li>
         <li>Margin / Márgenes</li>
     </ol>
-    
+
     <h3>Propiedades físicas para el modelo de caja:</h3>
     <!-- Lista desordenada con bullets etiqueta UL -->
     <ul>
@@ -136,5 +183,7 @@
     <input type="mail" placeholder="Correo">
     <button>Suscribeme</button>
 
+
 </body>
+<script src="js/alfgow.js"></script>
 </html>
