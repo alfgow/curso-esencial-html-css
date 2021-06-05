@@ -1,0 +1,76 @@
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root{
+    font-size: 16px;
+    --gray30: #212121;
+    --gray20: #212429;
+    --gray10: #616161; 
+}
+
+body {
+    color: var(--gray30);
+    font-family: alfgow;
+}
+
+a {
+    color: var(--gray30);
+}
+
+h1 {
+font-size: 60px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+header {
+    font-size: 14px;
+    color: var(--gray10);
+    /* Le vamos a dar el ancho al bloque de acuerdo al ancho
+    disponible en pantalla, evitando el scrooling
+    width: 50vw; */ 
+}
+
+header a {
+   color: #616161;
+   text-decoration: none;
+}
+
+header a:hover{
+    color: #212121;
+}
+
+nav details summary {
+    font-weight: bold;
+}
