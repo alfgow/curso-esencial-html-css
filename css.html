@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/alfgow.css">
+    <title>CSS</title>
+</head>
+<nav>
+    <a href="index.html">Inicio</a>
+</nav>
+<body>
+    <h1>Cascading Style Sheets</h1>
+    <h2>Reglas del CSS</h2>
+    <p>
+        Básica, lleva selector, apertura de llave, valores ";" en cada valor y cierre de llaves, ejemplo:
+        <pre>
+            body{
+                color: red;
+            }
+        </pre>
+    </p>
+    <p>A continuación iré apuntando el aprendizaje que he perfeccionado gracias
+        a éste curso
+    </p>
+    <h2>Selectores que me parecieron los más interesantes:</h2>
+    <ul>
+        
+        <li>
+        <h3>
+            <details>               
+                <summary>
+                    De clase: .class (muchos elementos de html pueden tener el mismo class)
+                </summary>
+         <p>
+             <pre>
+                 <hr>
+                 <h4>Ejemplo de Selector:</h4>
+                 &lt;h1 class=&quot;prueba&quot;&gt;
+                 &lt;h2 class=&quot;prueba&quot;&gt;
+                 <hr>
+                 <h4>Ejemplo de CSS</h4>
+                 .h1{
+                     color: red;
+                 }
+             </pre>         
+         </p>
+            </details>
+            </h3>
+        </li>
+
+        <li>
+            <h3>
+                <details>               
+                    <summary>
+                        De Id: #id (sólo un elemento html puede tener el id)
+                    </summary>
+             <p>
+                 <pre>
+                     <hr>
+                     <h4>Ejemplo de Selector:</h4>
+                     &lt;h1 id=&quot;alfgow&quot;&gt;
+                     <hr>
+                     <h4>Ejemplo de CSS</h4>
+                     #alfgow{
+                         color: red;
+                     }
+                 </pre>         
+             </p>
+                </details>
+                </h3>
+        </li>
+
+        <li>
+            <h3>
+                <details>               
+                    <summary>
+                        De Grupo: #id, .class / nos ayuda a dar la misma regla a diferentes Selectores
+                    </summary>
+             <p>
+                 <pre>
+                     <hr>
+                     <h4>Ejemplo de Selector:</h4>
+                     &lt;h1 id=&quot;alfgow&quot;&gt;Esto es un ejemplo&lt;/h1&gt;
+                     &lt;h2 class=&quot;prueba&quot;&gt;Para dar el mismo estilo a diferentes selectores&lt;/h2&gt;
+                     <hr>
+                     <h4>Ejemplo de CSS</h4>
+                     #alfgow, .prueba{
+                        color: red;
+                    }
+                 </pre>         
+             </p>
+                </details>
+                </h3>
+        </li>
+
+        <li>
+            <h3>
+                <details>               
+                    <summary>
+                        Descendente: nos servirán para ser súper específicos en que selector le quiero dar el estilo, dará el estilo a todos los elementos
+                        que tenga el selector indicado, muy similar al anterior pero va sin la coma
+                    </summary>
+             <p>
+                 <pre>
+                     <hr>
+                     <h4>Ejemplo de Selector:</h4>
+                     &lt;h1 id=&quot;alfgow&quot;&gt;Esto es un ejemplo&lt;/h1&gt;
+                     &lt;h2 class=&quot;prueba&quot;&gt;Para dar estilo sólo a este elemento&lt;/h2&gt;
+                     <hr>
+                     <h4>Ejemplo de CSS</h4>
+                     #alfgow .prueba{
+                        color: red;
+                    }
+                 </pre>         
+             </p>
+                </details>
+                </h3>
+        </li>
+
+        <li>
+            <h3>
+                <details>               
+                    <summary>
+                        Hijo directo: el estilo se le dará al selector hijo directo (Es decir sólo el primer nivel) del selector previo al ">"
+                    </summary>
+             <p>
+                 <pre>
+                     <hr>
+                     <h4>Ejemplo de Selector:</h4>
+                     &lt;h1 id=&quot;alfgow&quot;&gt;Esto es un ejemplo&lt;/h1&gt;
+                     &lt;h2 class=&quot;prueba&quot;&gt;Para dar estilo sólo a este elemento(primer nivel)&lt;/h2&gt;
+                     &lt;h3 class=&quot;prueba&quot;&gt;A éste nivel no le dará el estilo&lt;/h3&gt;
+                     <hr>
+                     <h4>Ejemplo de CSS</h4>
+                     #alfgow > .prueba{
+                        color: red;
+                    }
+                 </pre>         
+             </p>
+                </details>
+                </h3>
+        </li>
+
+        <li>
+            <h3>
+                <details>               
+                    <summary>
+                        Hermano: Dará el estilo a elementos del mismo nivel, en el ejemplo, dará estilo a todos los "H2" que sean hermanos del "H1":
+                    </summary>
+             <p>
+                 <pre>
+                     <hr>
+                     <h4>Ejemplo de Selector:</h4>
+                     &lt;h1&gt;Esto es un ejemplo&lt;/h1&gt;
+                     &lt;h2&gt;Para dar estilo a los hermanos, en este ejemplo los h2&lt;/h2&gt;
+                     &lt;h2&gt;éste también es hermano y también tendrá estilo&lt;/h2&gt;
+                     <hr>
+                     <h4>Ejemplo de CSS</h4>
+                     h1 ~ h2{
+                        color: red;
+                    }
+                 </pre>         
+             </p>
+                </details>
+                </h3>
+        </li>
+
+        <li>
+            <h3>
+                <details>               
+                    <summary>
+                        Adyacente: Dará estilo igual que el Hermano, pero sólo al más cercano, no a los demás:
+                    </summary>
+             <p>
+                 <pre>
+                     <hr>
+                     <h4>Ejemplo de Selector:</h4>
+                     &lt;h1&gt;Esto es un ejemplo&lt;/h1&gt;
+                     &lt;h2&gt;Para dar estilo al objeto adyacente más cercano&lt;/h2&gt;
+                     &lt;h2&gt;éste no tendrá estilo&lt;/h2&gt;
+                     <hr>
+                     <h4>Ejemplo de CSS</h4>
+                     h1 + h2{
+                        color: red;
+                    }
+                 </pre>         
+             </p>
+                </details>
+                </h3>
+        </li>
+
+        <li>
+            <h3>
+                <details>               
+                    <summary>
+                        Pseudo selectores, que representan estados de un elemento, por ejemplo el hover (Cuando pasas el mouse encima del elemento)
+                    </summary>
+             <p>
+                 <pre>
+                     <hr>
+                     <h4>Ejemplo de Selector:</h4>
+                     &lt;h1&gt;Al pasar el mouse sobre éste elemento, cambiará a color rojo&lt;/h1&gt;
+                   
+                     <hr>
+                     <h4>Ejemplo de CSS</h4>
+                     h1:hover {
+                        color: red;
+                    }
+                 </pre>         
+             </p>
+                </details>
+                </h3>
+        </li>
+       
+        <li>
+            <h3>
+                <details>               
+                    <summary>
+                        Pseudo Elementos: va a crear elementos especiales en el html (Agregar contenido) va con dobles ":" 
+                    </summary>
+             <p>
+                 <pre>
+                     <hr>
+                     <h4>Ejemplo de Selector:</h4>
+                     &lt;h1&gt;Agregará un guión antes y después del "hola"&lt;/h1&gt;
+                   
+                     <hr>
+                     <h4>Ejemplo de CSS</h4>
+                     h1::after{
+                        content: "_";
+                    }
+                    h1::before{
+                        content: "_";
+                    }
+                 </pre>         
+             </p>
+                </details>
+                </h3>
+        </li>
+        
+    </ul>
+    <h2>Relevancia en css</h2>
+    <ol>
+        <li>El selector de clase (.) es superior al tag (&lt;&gt;)</li>
+        <li>El selector de ID (#) es superior al de Clase (.)</li>
+        <li>Resumiento # es mayor que . es mayor que &lt; tag &gt; </li>
+    </ol>
+    <h2>Display: Block e Inline</h2>
+    <h4>Block: se refiere a aquellos elementos que ocuparán todo el espacio de su línea, no caben otros elementos en la misma línea</h4>
+    <h4>Inline: Son aquellos elmentos que no ocupan todo el espacio en su línea, por lo tanto permiten que otros elmentos estén en
+        la misma línes
+    </h4>
+
+    <h2>Flow Layout</h2>
+    <p>
+        Se refiere a cómo fluyen todos los elementos dentro del contenedor, obedece a la configuración del cdd (writing-mode y direction)
+         Writing-mode: Horizontal-tb (Top Bottom) direction: ltr (Left To Right)
+    </p>
+    <h2>Evitar que un bloque haga scrolling</h2>
+    <p>En CSS no utilizaremos unidades absolutas, vamos a utilizar el atributo width para indicar el ancho
+        y para utilizar una especie de porcentaje de pantalla se invoca la medida "VW"
+        Viewport Width
+    </p>
+    
+</body>
+<script src="js/alfgow.js"></script>
+</html>
