@@ -1,0 +1,263 @@
+
+/* FUENTES, ROOT Y HTML */
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root{
+    font-size: 16px;
+    --gray30: #212121;
+    --gray20: #212429;
+    --gray10: #616161;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ELEMENTOS HTML */
+
+.debug {
+    /* 
+    outline: 2px solid red; 
+    Para mi caso personal utilizare el box-shadow
+    */
+    box-shadow: 0 0 20px yellowgreen;
+}
+
+.hero {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/pattern.png);
+    height: 350px;
+    
+}
+
+
+/* Header */
+
+.header-content {
+    position: relative;
+}
+
+.header {
+    border-top: 1px solid red;
+    position: sticky;
+    top: 0;
+}
+
+header {
+    font-size: 14px;
+    width: 188px;
+    color: var(--gray10);
+    
+    /* POSITIONS */
+    position: absolute;
+    top: 64px;
+    left: -232px;
+    
+}
+
+header a {
+    color: #616161;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #212121;
+}
+
+header li {
+    margin-bottom: 16px;
+}
+
+nav details summary {
+    font-weight: bold;
+    line-height: 24px;
+}
+
+/* 
+se nos habilitan 5 opciones mas
+top, left, bottom, right, z-index
+*/
+/* 
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 1;
+ */
+/* 
+OTRAS POSICIONES
+position: fixed;
+position: stick;
+position: static;
+position: relative;
+position: absolute;
+*/
+/* Le vamos a dar el ancho al bloque de acuerdo al ancho
+disponible en pantalla, evitando el scrooling
+width: 50vw; */ 
+
+.wrapper {
+    width: 902px;
+    margin: auto;
+}
+
+.main-content {
+    background: white;
+}
+
+body {
+    color: var(--gray30);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+a {
+    color: var(--gray30);
+}
+
+
+h1 {
+font-size: 60px;
+margin: 64px 0 16px;
+font-weight: normal;
+}
+
+
+hr {
+   margin: 64px 0;
+}
+
+h2 {
+    font-size: 32px;
+    margin: 64px 0 40px;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 16px 0 24px;
+    font-weight: normal;
+    position: sticky;
+    top: 3px;
+    background: white;           
+}
+
+blockquote {
+    margin: 32px 0;
+    padding-left: 16px;
+    line-height: 24px;
+    font-size: 24px;
+    border-left: 4px solid var(--gray30);
+
+}
+
+blockquote span::before {
+    content: '-'
+}
+
+blockquote span {
+    color: var(--gray10);
+}
+
+pre {
+    background: #FEC62E;
+    padding: 40px;
+    line-height: 24px;
+    border-radius: 100px 0 100px 0;
+}
+
+input {
+    padding: 10px 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    /* Practica personal */
+    border-radius: 20px 0 20px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid blue;
+}
+
+input:focus{
+    outline:none;
+}
+
+
+/* SECTION CONTENT */
+
+.section-content ol li {
+    line-height: 24px;
+}
+
+.section-content ul li {
+    margin-bottom: 16px;
+}
+
+.section-content + hr {
+    display: none;
+}
+
+.section-content {
+    counter-reset: alfgow;
+    margin-bottom: 64px;
+    position: relative;
+}
+
+.section-content:first-of-type {
+    margin: 0;
+}
+
+.section-content h3 {
+    counter-increment: alfgow;
+    padding-bottom: 8px;
+}
+
+.section-content h3::before {
+    content: counter(alfgow)". ";
+}
+
+.section-content h3::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: var(--gray30);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;    
+}
+
+.section-content img {
+    margin-top: 40px;
+}
+
+
+::selection {
+    background: rgb(240, 180, 180);
+}
