@@ -1,0 +1,303 @@
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: alfgow;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root{
+    font-size: 16px;
+    --white30: white;
+    --white20: #A5A3A5;
+    --white10: #616161;
+    --alfgow: #a5c71b;
+   
+}
+
+body {
+    color: var(--white30);
+    font-family: 'Nunito', sans-serif;
+    background: #2e2c2d;
+    margin: 0;
+    /* margin-inline: ;
+    margin-block: ; */
+}
+
+a {
+    color: var(--white30);
+}
+
+
+
+.main hr {
+    display: none;
+}
+
+.wrapper {
+    /* border: 1px solid var(--alfgow); */
+    max-inline-size: 902px;
+    margin: auto;
+}
+
+.main-content {
+    /* border: 1px solid whitesmoke; */
+    padding-inline: 16px;
+}
+
+
+hr {
+margin-block: 40px;
+border-color: rgba(97, 97, 97, 0.2);
+}
+
+h1 {
+font-size: 40px;
+/* text-align: end; */
+margin-block-start: 64px;
+margin-block-end: 16px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-block: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-block: 16px;
+}
+
+.header {
+   
+}
+
+.header-content {
+    padding-inline-start: 20px;
+}
+
+header {
+    margin-block-start: 20px;
+    font-size: 14px;
+    color: var(--white30);
+    
+    /* Le vamos a dar el ancho al bloque de acuerdo al ancho
+    disponible en pantalla, evitando el scrooling
+    width: 50vw; */ 
+}
+
+header a {
+   color: var(--white20);
+   text-decoration: none;
+}
+
+header a:hover{
+    color: var(--white30);
+}
+
+header li {
+    color: var(--white20);
+    margin-block-end: 16px;
+}
+
+nav details summary {
+    font-weight: bold;
+}
+
+pre {
+    background: var(--white10);
+    padding: 40px;
+    color: var(--white30);
+    overflow: auto;
+    border-radius: 20px 20px 0 0;
+    border: 10px solid #5551FF;
+    box-shadow: -10px 10px 0 0 #ABAAF6;
+    margin-block-end: 30px
+}
+
+/*
+Para "hacer" un circulo con los bordes:
+    border-radius: 50%;
+    --- Se requioere tener un inline-size y un block-size del mismo tamano
+*/
+
+p {
+    color: var(--white20)
+}
+
+
+.hero {
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    block-size: 96px;
+}
+
+.section-content {
+    counter-reset: alfgow;
+}
+
+.section-content h3 {
+    counter-increment: alfgow;
+}
+
+/* .section-content h3::before {
+    content: counter(alfgow)".- ";
+} */
+
+.section-content img {
+    display: block;
+    margin-block-start: 40px;
+    max-inline-size: 100%;
+}
+
+/* .section-content h3::after {
+    content: '';
+    width: 32px;
+    height: 4px;
+    background: var(--white30);
+    display: block;
+} */
+
+::selection {
+    background: rgb(240, 180, 180);
+}
+
+blockquote {
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background: var(--white10);
+    border-radius: 8px;
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+    line-height: 32px;
+    font-size: 24px;
+}
+
+blockquote p {
+    color: var(--white30);
+}
+
+/* Slider */
+
+.slider {
+    /* border: 1px solid red; */
+  }
+  
+  .slider-container {
+    /* block-size: 100px; */
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+    /* border: 1px solid purple; */
+  }
+  .video {
+    margin: 0;
+    /* border: 1px solid blue; */
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+  
+  .slider-bullet-list {
+    /* border: 1px solid yellow; */
+    text-align: center;
+    margin-block-start: 10px;
+   
+  }
+  
+  .slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background: var(--alfgow);
+    border-radius: 50%;
+  }
+
+  /* FORMULARIOS */
+
+.form input {
+    inline-size: 100%;
+    border: 1px solid var(--alfgow);
+    background: #1d1c1c;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+    text-align: center;
+}
+
+.form input:focus {
+   outline-color: var(--alfgow);
+}
+
+.form input::-webkit-input-placeholder {
+    color: var(--alfgow);
+    text-align: center;
+}
+
+.form input[type="submit"] {
+    color: var(--white30);
+    background: rgb(96, 150, 16);
+    font-weight: bold;
+    border: none;
+}
+
+/* Media Queries Mobile First*/
+
+@media screen and (min-width: 1366px) {
+    .hero {
+        block-size: 350px;
+    }
+
+    .header {
+        position: sticky;
+        inset-block-start: -45px;
+    }
+
+    .header-content {
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+
+    header {
+        position: absolute;
+        inset-block-start: 65px;
+        inset-inline-start: -208px;
+        inline-size: 188px;
+    }   
+    
+    h1 {
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+}
