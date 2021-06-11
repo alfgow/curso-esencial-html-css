@@ -179,7 +179,8 @@ p {
 } */
 
 ::selection {
-    background: rgb(240, 180, 180);
+    color: #a5c71b;
+    background: #1d1c1c;
 }
 
 blockquote {
