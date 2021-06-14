@@ -166,6 +166,7 @@ input:focus{
 }
 
 
+
 /* SECTION CONTENT */
 
 .section-content ol li {
@@ -251,6 +252,15 @@ input:focus{
     background: var(--gray30);
     border-radius: 50%;
   }
+
+
+  footer {
+    background-color: #212429;
+    text-align: center;
+    height: 70px;
+    color: white;
+    padding-top: 20px;
+}
 
 /* Media Queries Mobile First*/
 

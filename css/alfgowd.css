@@ -1,43 +1,24 @@
 
-/* FUENTES, ROOT Y HTML */
-
-@font-face {
-    font-family: alfgow;
-    src: url('../fonts/charter-regular.otf');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: alfgow;
-    src: url('../fonts/charter-italic.otf');
-    font-style: italic;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: alfgow;
-    src: url('../fonts/charter-bold.otf');
-    font-style: normal;
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: alfgow;
-    src: url('../fonts/charter-bold-italic.otf');
-    font-style: italic;
-    font-weight: bold;
-}
-
 :root{
     font-size: 16px;
     --gray30: #212121;
     --gray20: #212429;
-    --gray10: #616161;
+    --gray10: #545454;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    color: var(--gray30);
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    color: var(--gray10);
 }
 
 /* ELEMENTOS HTML */
@@ -51,8 +32,10 @@ html {
 }
 
 .hero {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/pattern.png);
-    block-size: 96px;    
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/bgverd.png);
+    block-size: 96px;
+    background-position: center;
+    background-size: cover;   
 }
 
   .slider-container {
@@ -88,6 +71,24 @@ html {
 
 /* Header */
 
+.header {
+  
+}
+
+.header-content {
+    padding-inline-start: 20px;
+}
+
+header {
+    margin-block-start: 20px;
+    font-size: 14px;
+    color: var(--white30);
+    /* border: 1px solid red; */
+    text-align: left;    
+    /* Le vamos a dar el ancho al bloque de acuerdo al ancho
+    disponible en pantalla, evitando el scrooling
+    width: 50vw; */ 
+}
 
 
 header a {
@@ -142,11 +143,7 @@ width: 50vw; */
     background: white;
 }
 
-body {
-    color: var(--gray30);
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-}
+
 
 a {
     color: var(--gray30);
@@ -156,7 +153,7 @@ a {
 h1 {
 font-size: 60px;
 margin: 64px 0 16px;
-font-weight: normal;
+font-weight: bold;
 }
 
 
@@ -180,27 +177,36 @@ h3 {
 }
 
 blockquote {
-    margin: 32px 0;
     padding-left: 16px;
+    border-inline-start: 4px solid #5551FF;
+    width: 633px;
+    margin: auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+
+blockquote p {
+    color: #000000;
     line-height: 24px;
     font-size: 24px;
-    border-left: 4px solid var(--gray30);
-
 }
 
 blockquote span::before {
-    content: '-'
+    content: '-';
+    color: #000000;
 }
 
 blockquote span {
-    color: var(--gray10);
+    color: #000000;
 }
 
 pre {
-    background: #FEC62E;
+    border: 8px solid #5551FF;
     padding: 40px;
     line-height: 24px;
-    border-radius: 100px 0 100px 0;
+    border-radius: 8px;
+    box-shadow: -10px 10px 0px #ABAAF6;
 }
 
 input {
@@ -219,23 +225,7 @@ input:focus{
     outline:none;
 }
 
-.header {
-   
-}
 
-.header-content {
-    padding-inline-start: 20px;
-}
-
-header {
-    margin-block-start: 20px;
-    font-size: 14px;
-    color: var(--white30);
-    
-    /* Le vamos a dar el ancho al bloque de acuerdo al ancho
-    disponible en pantalla, evitando el scrooling
-    width: 50vw; */ 
-}
 
 /* SECTION CONTENT */
 
@@ -270,19 +260,14 @@ header {
     content: counter(alfgow)". ";
 }
 
-.section-content h3::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background: var(--gray30);
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;    
-}
+
 
 .section-content img {
     margin-top: 40px;
+}
+
+.section-content img:first-of-type {
+    margin-top: 0;
 }
 
 
@@ -291,13 +276,16 @@ header {
 }
 
 footer {
-    background-color: #212429;
+    background-color: #000000;
     text-align: center;
     height: 70px;
-    color: white;
+    
     padding-top: 20px;
 }
 
+footer p {
+    color: white;
+}
 
 /* Media Queries Mobile First*/
 
@@ -320,12 +308,15 @@ footer {
     header {
         position: absolute;
         inset-block-start: 65px;
-        inset-inline-start: -208px;
+        inset-inline-start: 930px;
         inline-size: 188px;
+        /* border: 1px solid red; */
     }   
     
     h1 {
         font-size: 60px;
         margin-block-start: 64px;
     }
+
+   
 }
